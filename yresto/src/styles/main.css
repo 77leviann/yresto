@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  padding-bottom: 30px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FF8400;
+  padding: 10px;
+  width: 100%;
+  min-height: 50px;
+  max-height: 60px;
+  position: absolute;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 2vh;
+}
+
+#logo {
+  min-width: 25px;
+  max-width: 50px;
+  margin-right: 1em;
+}
+
+#brand {
+  color: #4F200D;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul > li {
+  list-style-type: none;
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+nav ul > li > a {
+  color: #F6F1E9;
+  text-decoration: none;
+}
+
+nav ul > li > a:hover {
+  color: #4F200D;
+  transition: all .4s ease-in-out;
+}
+
+.menu a {
+  padding: 15px;
+  min-width: 44px;
+}
+
+.menu {
+  min-width: 44px;
+}
+
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 44px;
+  height: 5px;
+  background-color: #F6F1E9;
+  margin: 4px 0;
+  border-radius: 2px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-right: 2vh ;
+}
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+  max-height:100vh;
+  
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2vh;
+}
+
+.header {
+  text-align: center;
+}
+
+.restaurants-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.restaurant-item {
+  width: calc(33.33% - 10px); 
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-bottom: 20px; 
+  box-sizing: border-box; 
+  min-width: 44px; 
+  min-height: 44px; 
+}
+
+.restaurant-name {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.read-more-text {
+  display: none;
+}
+
+.read-more-button {
+  color: blue;
+  cursor: pointer;
+}
+
+.read-more-text--show {
+  display: inline;
+}
+
+.icon {
+  font-size: px;
+  color: gold;
+}
+
+.info {
+  margin-bottom: 5px;
+  font-size: 15px;
+  
+}
+
+.review-count {
+  font-size: 10px; 
+  color: rgba(0, 0, 0, 0.5); 
+  font-weight: lighter;
+}
+
+
+.restaurant-image {
+  width: 100%;
+  max-height: 150px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  background-color: #FF8400;
+  padding: 10px;
+  width: 100%;
+  min-height: 45px;
+  max-height: 60px;
+}
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: red;
+  color: #F6F1E9;
+  padding: 3px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+@media (min-width: 1200px) {
+  .hero img {
+    min-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .menu {
+    position: fixed;
+    margin-top: 13px;
+    right: -200%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #FF8400;
+    width: 100%;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .menu.active{
+    right: 0;
+    transform: translateX(0%);
+  }
+
+  .restaurant-item {
+    width: calc(50% - 10px);
+    min-width: auto; 
+    min-height: auto;
+  }
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+  .restaurant-item {
+    width: calc(100% - 10px);
+  }
+}
+
+.restaurant-image {
+  max-height: 300px;
+}
+
+@media screen and (max-width: 400px) {
+  #brand {
+    display: none;
+  }
+
+}
