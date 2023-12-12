@@ -1,4 +1,4 @@
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 651px) {
   .app-bar {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
@@ -26,6 +26,28 @@
     width: 120px;
     text-align: center;
     margin: 0;
+  }
+}
+
+.hero {
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  min-height: 550px;
+  background: #000000;
+  background-image: url("../public/images/optimization/hero-image_2-large.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media screen and (max-width: 651px) {
+  .hero {
+    background-image: url("../../src/public/images/optimization/hero-image_2-small.jpg");
+    min-height: 500px;
+    width: 100%;
+    background-size: cover;
   }
 }
 

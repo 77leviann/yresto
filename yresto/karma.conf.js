@@ -1,8 +1,8 @@
+/* eslint-disable func-names */
 // Karma configuration
 // Generated on Fri Jul 03 2020 20:15:52 GMT+0700 (Western Indonesia Time)
 module.exports = function (config) {
   config.set({
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -11,9 +11,7 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
-    files: [
-      'specs/**/*Spec.js',
-    ],
+    files: ['specs/**/*Spec.js'],
 
     // list of files / patterns to exclude
     exclude: [],
@@ -45,14 +43,14 @@ module.exports = function (config) {
     reporters: ['progress'],
 
     // web server port
-    port: 9876,
+    port: 1111,
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
 
     // level of logging
     /* possible values: config.LOG_DISABLE || config.LOG_ERROR
-    || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG */
+        || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG */
     logLevel: config.LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes

@@ -1,7 +1,6 @@
 import FavoriteRestaurantIdb from '../../data/favorite-resto-idb';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
-/* eslint-disable indent */
 const Favorite = {
   async render() {
     return `
