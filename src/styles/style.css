@@ -1,0 +1,302 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  background-color: #bf1722;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 100px;
+}
+
+.app-bar {
+  padding: 6px 18px;
+  background-color: #ff8400;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 14px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar__brand h1 {
+  font-family: "Poppins", sans-serif;
+  color: #4f200d;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar__navigation {
+  position: absolute;
+  top: 60px;
+  left: -200px;
+  width: 150px;
+  transition: all 0.2s;
+  padding: 10px;
+  background-color: #ff8400;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar__navigation ul li a {
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px;
+}
+
+.app-bar__navigation ul li a:hover {
+  color: #4f200d;
+  transition: all 0.4s ease-in-out;
+}
+
+#logo {
+  min-width: 25px;
+  max-width: 50px;
+  margin-right: 1em;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero-inner {
+  align-self: center;
+  text-align: center;
+  max-width: 60%;
+  position: absolute;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.hero-inner > h1,
+.hero-inner > p {
+  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.hero-inner > h1 {
+  color: #4f200d;
+  font-weight: 900;
+  font-size: 3em;
+  animation: shakeAndFade 2s ease-in-out;
+  filter: brightness(120%);
+}
+
+.hero-inner > p {
+  color: #ffffff;
+  font-size: 18px;
+  animation: shakeAndFade 2s ease-in-out;
+}
+
+@keyframes shakeAndFade {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-10px);
+    opacity: 0.8;
+  }
+}
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content__heading {
+  font-weight: normal;
+  text-align: center;
+  font-size: 34px;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.restaurant-item {
+  width: calc(33.33% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item__header__poster {
+  width: 100%;
+}
+
+.restaurant-item__header__rating {
+  left: 0;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.restaurant-item__header__rating__star {
+  color: gold;
+}
+
+.restaurant-item__header__rating__score {
+  color: #000000;
+  padding-left: 10px;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 18px;
+}
+
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.restaurant-item .restaurant-item__content h3 a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.restaurant-item-content__city {
+  margin-top: 20px;
+}
+
+.restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.restaurant-item__content a {
+  padding: 14px 0px;
+}
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.restaurant__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.restaurant__table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.resto__poster {
+  width: 100%;
+  max-width: 100%;
+}
+
+.resto__info h4 {
+  margin: 8px 0;
+}
+
+.review h3 {
+  padding-bottom: 1em;
+  font-weight: 900;
+}
+
+.review-head {
+  display: flex;
+  justify-content: baseline;
+  gap: 10px;
+}
+
+.reviewer-name {
+  color: black;
+  font-weight: 600;
+}
+
+.review-date {
+  color: gray;
+  font-weight: 600;
+}
+
+.reviewer-review {
+  font-size: 16px;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc017;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #ff8400;
+  border-top: 1px solid #ffffff;
+  text-align: center;
+  color: #ffffff;
+  padding: 2em;
+}

@@ -1,0 +1,68 @@
+@media screen and (min-width: 651px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.hero {
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  min-height: 550px;
+  background: #000000;
+  background-image: url("../public/images/optimization/hero-image_2-large.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media screen and (max-width: 651px) {
+  .hero {
+    background-image: url("../../src/public/images/optimization/hero-image_2-small.jpg");
+    min-height: 500px;
+    width: 100%;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .restaurant-item {
+    width: calc(100% - 10px);
+  }
+}
+
+.restaurant-image {
+  max-height: 300px;
+}
+
+@media screen and (max-width: 400px) {
+  #brand {
+    display: none;
+  }
+}
